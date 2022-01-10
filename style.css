@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@500;600&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #121212;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Create banner side */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.banner {
+  display: flex;
+  height: 100vh;
+}
+
+.banner-left {
+  flex: 1;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-right img {
+  width: 90%;
+}
+
+/* By default line height 1 */
+.banner-text {
+  line-height: 2;
+  margin: 20px 0;
+}
+
+.button {
+  color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  background-color: #22bedd;
+  border: 2px solid #22bedd;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  /* transition effect */
+  transition: 1.5s;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+/* Create typing effect using CSS */
+.banner-title {
+  font-size: 60px;
+  white-space: nowrap;
+  position: relative;
+  color: transparent;
+}
+
+.banner-title::before {
+  content: "Shamim Islam";
+  color: #22bedd;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation: typing 3s ease-in infinite;
+}
+
+@keyframes typing {
+  0% {
+    content: "S|";
+  }
+
+  6% {
+    content: "Sh|";
+  }
+
+  12% {
+    content: "Sha|";
+  }
+
+  18% {
+    content: "Sham|";
+  }
+
+  24% {
+    content: "Shami|";
+  }
+
+  30% {
+    content: "Shamim|";
+  }
+
+  36% {
+    content: "Shamim| |";
+  }
+
+  42% {
+    content: "Shamim I|";
+  }
+
+  48% {
+    content: "Shamim Is|";
+  }
+
+  54% {
+    content: "Shamim Isl|";
+  }
+
+  60% {
+    content: "Shamim Isla|";
+  }
+
+  66% {
+    content: "Shamim Islam|";
+  }
+
+  /* For Break */
+
+  70%,
+  88% {
+    content: "Shamim Islam|";
+  }
+
+  89% {
+    content: "Shamim Isla|";
+  }
+
+  90% {
+    content: "Shamim Isl|";
+  }
+
+  91% {
+    content: "Shamim Is|";
+  }
+
+  92% {
+    content: "Shamim I|";
+  }
+
+  93% {
+    content: "Shamim |";
+  }
+
+  94% {
+    content: "Shamim|";
+  }
+
+  95% {
+    content: "Shami|";
+  }
+
+  96% {
+    content: "Sham|";
+  }
+
+  97% {
+    content: "Sha|";
+  }
+
+  98% {
+    content: "Sh|";
+  }
+
+  99% {
+    content: "S|";
+  }
+
+  100% {
+    content: "|";
+  }
+}
+
+/*banner side End*/
+
+/* Start section 02 (Photo Gallery*/
+.gallery-photo {
+  height: 280px;
+  width: 280px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Border area Start*/
+.border {
+  background-color: #fff;
+  position: absolute;
+  transition: 0.7s ease-in;
+}
+
+.border.top,
+.border.bottom {
+  height: 4px;
+  width: 270px;
+}
+
+.border.left,
+.border.right {
+  height: 270px;
+  width: 4px;
+}
+
+.border.top {
+  top: 5px;
+  right: 100%;
+}
+
+.border.bottom {
+  bottom: 5px;
+  left: 100%;
+}
+
+.border.left {
+  left: 5px;
+  top: 100%;
+}
+.border.right {
+  right: 5px;
+  bottom: 100%;
+}
+
+/* Hover */
+.gallery-photo:hover .border.top {
+  right: 5px;
+}
+
+.gallery-photo:hover .border.bottom {
+  left: 5px;
+}
+
+.gallery-photo:hover .border.left {
+  top: 5px;
+}
+
+.gallery-photo:hover .border.right {
+  bottom: 5px;
+}
+/* Border area End*/
